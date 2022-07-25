@@ -20,15 +20,22 @@ X_test = sc_X.transform(X_test)
 
 # Fitting SVM classifier to the Training set
 from sklearn.svm import SVC
-#*******Missing line here**********************
-#*******Missing line here**********************
+# classifier = SVC(kernel='linear', random_state=0)
+classifier = SVC(kernel='rbf', random_state=0)
+classifier.fit(X_train, y_train)
 
 # Predicting the Test set results
-#*******Missing line here**********************
+y_pred = classifier.predict(X_test)
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(y_test, y_pred)
+print("SVM Model accuracy is ", accuracy)
 
 # Making the confusion Matrix
-from sklearn.metrics import confusion_matrix
-#*******Missing line here**********************
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+cm = confusion_matrix(y_test, y_pred)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm)
+disp.plot()
+plt.show()
 
 # Visualizing the Training set results
 from matplotlib.colors import ListedColormap

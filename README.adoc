@@ -1,0 +1,26 @@
+# support-vector-machines
+
+== What does this application do?
+
+This is a simple python application to build a support vector machines (SVMs) model using given dataset (SVMs_dataset) that includes customer information of an auto company.
+The dataset contains five columns (four features and one output): Customer ID (x1), Gender (x2), Age (x3), Salary (x4), and Purchased (y).
+The goal of our model is to predict whether customers are more likely to purchase (ys) new vehicles after receiving ad emails or not using age and salary features (xs).
+This is a binary classification problem, i.e., purchase (1) or no purchase (0). The entire dataset (SVMs_dataset) includes 400 samples.
+
+== Technical Details
+- Python Documentation: link:https://www.python.org/[Python]
+- Version control: git
+- IDE: Pycharm (Pure Python Project with venv)
+
+
+
+== Developer Guide to run the code locally
+==== `git clone https://github.com/kalyansagi/support-vector-machines.git`
+
+==== `cd /support-vector-machines`
+
+==== `git checkout master`
+
+
+
+
